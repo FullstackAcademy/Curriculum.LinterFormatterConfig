@@ -17,3 +17,10 @@ function example(obj, num) {
   if (typeof num !== 'numer') throw Error('oops');
   return obj['age'] === num;
 }
+
+module.exports = {
+  helloBob,
+  example: example,
+}
+
+export default firstName;
