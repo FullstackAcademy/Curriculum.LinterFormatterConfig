@@ -1,0 +1,29 @@
+# ESLint + Prettier (not React yet)
+
+Here are some steps to follow to add ESLint and Prettier support to an existing repo:
+
+## Install the Dependencies
+
+```sh
+  npm i -D \
+  eslint@7.4.0 \
+  eslint-config-prettier@6.11.0 \
+  eslint-plugin-prettier@3.1.4 \
+  prettier@2.0.5
+```
+
+## Add the config files
+
+```sh
+touch .eslintrc.json .prettierrc.json
+```
+
+There are sample config files in this repo. They're already configured to be used with Mocha, ES6 & ES5 modules, Express, etc. The rules tend to be not-very-opinionated, but you can always add or edit rules in the "rules" section of eslintrc.json.
+
+## Configure the editor (student)
+
+This will vary by editor, but for VSCode, be sure to install the [ESLint](https://github.com/Microsoft/vscode-eslint) and [Prettier](https://github.com/prettier/prettier-vscode) extensions.
+
+Set the default formatter to Prettier. You can do this in settings (see the [Prettier instructions](https://github.com/prettier/prettier-vscode#default-formatter)), but you can also control-click on a JS file and select "Format Document With" > Configure Default Formatter > Prettier.
+
+Set the default linter to ESLint. VSCode has it's own linter tslint. You can turn this off in settings (search for "validate"), and turn off "JavaScript > Validate: Enable"
